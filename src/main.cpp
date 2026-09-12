@@ -1,7 +1,10 @@
 #include<iostream>
+#include"gl_data.h"
+#include <iomanip>
 
-int main(void){
-    
-    std::cout<<"hello world!"<<std::endl;
+int main(){
     return 0;
 }
+
+
+
