@@ -21,8 +21,7 @@ struct exam_record {
 struct account_info {
     std::string id;
     std::string name;
-    std::string pwd_hash;
-    std::string salt;
+    std::string pwd;
     bool disabled = false;
     std::vector<std::string> login_history;
 };

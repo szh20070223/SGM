@@ -25,15 +25,14 @@ void from_json(const json& j, exam_record& e) {
 }
 
 void to_json(json& j, const account_info& a) {
-    j = json{{"id", a.id}, {"name", a.name}, {"pwd_hash", a.pwd_hash},
-             {"salt", a.salt}, {"disabled", a.disabled},
-             {"login_history", a.login_history}};
+    j = json{{"id", a.id}, {"name", a.name}, {"pwd", a.pwd},
+             {"disabled", a.disabled}, {"login_history", a.login_history}};
 }
+
 void from_json(const json& j, account_info& a) {
     a.id            = j.value("id", "");
     a.name          = j.value("name", "");
-    a.pwd_hash      = j.value("pwd_hash", "");
-    a.salt          = j.value("salt", "");
+    a.pwd           = j.value("pwd", "");
     a.disabled      = j.value("disabled", false);
     a.login_history = j.value("login_history", std::vector<std::string>{});
 }

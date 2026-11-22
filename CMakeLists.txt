@@ -19,6 +19,7 @@ add_library(t STATIC
     src/GradeSystem.cpp
     src/persistence.cpp
     src/menus_stub.cpp
+    src/user.cpp
 )
 
 target_include_directories(t PUBLIC
